@@ -1,0 +1,19 @@
+# Data loading and analysis
+pandas
+numpy
+pyarrow
+
+# Visualization
+matplotlib
+seaborn
+plotly>=5.18
+
+# Machine learning
+scikit-learn
+
+# Dashboard
+streamlit>=1.30
+reportlab>=4.0
+
+# Notebooks
+jupyter

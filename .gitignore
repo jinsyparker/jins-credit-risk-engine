@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files
+data/raw/*
+data/processed/*
+data/demo/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/processed/expected_loss_by_grade_v1.csv
+!data/processed/expected_loss_by_sub_grade_v1.csv
+!data/processed/expected_loss_by_term_v1.csv
+!data/processed/expected_loss_by_purpose_v1.csv
+!data/processed/expected_loss_by_issue_year_v1.csv
+!data/processed/expected_loss_by_pd_decile_v1.csv
+!data/processed/expected_loss_top_concentration_v1.csv
+!data/processed/expected_loss_pd_ead_matrix_v1.csv
+!data/processed/lgd_sensitivity_summary_v1.csv
+!data/processed/lgd_sensitivity_by_vintage_v1.csv
+!data/processed/expected_loss_lgd_sensitivity_summary_v1.csv
+!data/processed/realized_vs_expected_loss_summary_v1.csv
+!data/processed/realized_loss_proxy_by_grade_v1.csv
+!data/processed/realized_loss_proxy_by_pd_decile_v1.csv
+!data/demo/.gitkeep
+!data/demo/loans_with_pd_lgd_ead_sample_v1.csv
+
+# Reports
+reports/figures/*
+reports/tables/*
+!reports/figures/.gitkeep
+!reports/tables/.gitkeep
+!reports/figures/*.png
+!reports/tables/*.csv
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Environment variables
+.env
