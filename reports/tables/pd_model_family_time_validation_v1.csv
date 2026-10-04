@@ -1,4 +1,4 @@
-feature_set,feature_set_description,model_name,time_train_rows,time_test_rows,time_test_default_rate,roc_auc,pr_auc,brier_score,highest_lowest_decile_default_rate_ratio
+feature_set,feature_set_description,model_name,time_train_rows,time_test_rows,time_test_default_rate,roc_auc,average_precision_ap,brier_score,highest_lowest_decile_default_rate_ratio
 Feature Set A,"Full risk/pricing model with grade, sub_grade, and int_rate",Logistic Regression Baseline,1062380,282970,0.21819627522352192,0.6953431363624321,0.36800656098268536,0.1579311844215356,9.728337236533958
 Feature Set A,"Full risk/pricing model with grade, sub_grade, and int_rate",Regularized Logistic Regression L2,1062380,282970,0.21819627522352192,0.695327641845121,0.36801820355726916,0.15792483518667852,9.705836575875486
 Feature Set A,"Full risk/pricing model with grade, sub_grade, and int_rate",Gradient Boosting,1062380,282970,0.21819627522352192,0.6923953141992973,0.3682431796401322,0.1578278533719522,9.756906077348066

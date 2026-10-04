@@ -1,4 +1,4 @@
-model_version,feature_set_description,number_of_features_after_preprocessing,roc_auc,pr_auc,brier_score,lowest_decile_default_rate,highest_decile_default_rate,highest_lowest_decile_default_rate_ratio
+model_version,feature_set_description,number_of_features_after_preprocessing,roc_auc,average_precision_ap,brier_score,lowest_decile_default_rate,highest_decile_default_rate,highest_lowest_decile_default_rate_ratio
 A_baseline,"Baseline features with grade, sub_grade, and int_rate",126,0.7093534937064998,0.3701433947621853,0.1453021063811794,0.042702642435054075,0.4491024640428141,10.516971279373367
 B_remove_sub_grade,"Remove sub_grade, keep grade and int_rate",91,0.7074087518958643,0.3686221196546239,0.1455396512207911,0.04634481733377931,0.4477273571932954,9.660785886126705
 C_remove_grade_and_sub_grade,"Remove grade and sub_grade, keep int_rate and borrower/loan variables",84,0.7050576122335266,0.36469260518864166,0.14621084682322572,0.04664213773367525,0.4434162113948043,9.506772908366534

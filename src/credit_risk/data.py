@@ -44,14 +44,20 @@ def parse_percent(series: pd.Series) -> pd.Series:
 
 def parse_term_months(series: pd.Series) -> pd.Series:
     """Extract loan term in months from LendingClub term strings."""
-    return pd.to_numeric(series.astype(str).str.extract(r"(\\d+)")[0], errors="coerce")
+    is_scalar = not isinstance(series, pd.Series)
+    values = pd.Series([series]) if is_scalar else series
+    parsed = pd.to_numeric(values.astype("string").str.extract(r"(\d+)")[0], errors="coerce")
+    return parsed.iloc[0] if is_scalar else parsed
 
 
 def parse_emp_length(series: pd.Series) -> pd.Series:
     """Convert LendingClub employment length strings to numeric years."""
-    cleaned = series.astype(str).str.strip().str.lower()
-    cleaned = cleaned.replace({"nan": None, "n/a": None, "< 1 year": "0", "10+ years": "10"})
-    return pd.to_numeric(cleaned.str.extract(r"(\\d+)")[0], errors="coerce")
+    is_scalar = not isinstance(series, pd.Series)
+    values = pd.Series([series]) if is_scalar else series
+    cleaned = values.astype("string").str.strip().str.lower()
+    cleaned = cleaned.replace({"n/a": pd.NA, "< 1 year": "0", "10+ years": "10"})
+    parsed = pd.to_numeric(cleaned.str.extract(r"(\d+)")[0], errors="coerce")
+    return parsed.iloc[0] if is_scalar else parsed
 
 
 def clean_lendingclub_fields(data: pd.DataFrame) -> pd.DataFrame:

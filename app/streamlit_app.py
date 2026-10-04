@@ -47,7 +47,7 @@ This project evaluates whether an interpretable probability-of-default model rem
 ### Dashboard Sections
 
 - **Portfolio Overview:** portfolio metrics, PD distribution, and baseline Expected Loss distribution.
-- **PD Validation:** model comparison, borrower-only ablation, calibration, decile separation, and out-of-time validation.
+- **PD Validation:** model comparison, borrower-only ablation, calibration, decile separation, and Out-of-Time validation.
 - **Expected Loss:** segment decomposition, concentration, PD x EAD drivers, and LGD sensitivity.
 - **Scenario Analysis:** deterministic PD/LGD/EAD shocks applied to baseline Expected Loss.
 

@@ -3,6 +3,26 @@ from __future__ import annotations
 import pandas as pd
 
 
+DISPLAY_NAME_OVERRIDES = {
+    "roc_auc": "ROC-AUC",
+    "average_precision_ap": "Average Precision (AP)",
+    "random_split_average_precision_ap": "Random Split Average Precision (AP)",
+    "time_split_average_precision_ap": "Time Split Average Precision (AP)",
+    "brier_score": "Brier Score",
+    "log_loss": "Log Loss",
+    "gini": "Gini",
+    "ks_statistic": "KS Statistic",
+    "mean_predicted_pd": "Mean Predicted PD",
+    "observed_default_rate": "Observed Default Rate",
+    "coefficient": "Coefficient",
+    "exp_coefficient": "Exp(Coefficient)",
+    "metric": "Metric",
+    "random_holdout": "Random Holdout",
+    "out_of_time": "Out-of-Time",
+    "interpretation": "Interpretation",
+}
+
+
 def scale_value(value: float, display_scale: str) -> float:
     if display_scale == "Millions":
         return value / 1_000_000
@@ -59,7 +79,23 @@ def to_display_table(df: pd.DataFrame, display_scale: str = "Millions") -> pd.Da
         elif any(token in lower for token in ["ead", "expected_loss", "realized_loss", "difference"]):
             if pd.api.types.is_numeric_dtype(out[col]):
                 out[col] = out[col].map(lambda x: format_currency(x, display_scale))
-        elif any(token in lower for token in ["pd", "lgd", "ratio", "mean_", "median_", "std_", "p05", "p25", "p75", "p95"]):
+        elif any(
+            token in lower
+            for token in [
+                "pd",
+                "lgd",
+                "ratio",
+                "precision",
+                "coefficient",
+                "mean_",
+                "median_",
+                "std_",
+                "p05",
+                "p25",
+                "p75",
+                "p95",
+            ]
+        ):
             if pd.api.types.is_numeric_dtype(out[col]):
                 out[col] = out[col].map(format_rate)
-    return out
+    return out.rename(columns=DISPLAY_NAME_OVERRIDES)

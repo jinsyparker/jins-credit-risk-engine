@@ -30,7 +30,7 @@ def classification_probability_metrics(y_true, y_score) -> dict[str, float]:
     auc = roc_auc_score(y_true, y_score)
     return {
         "roc_auc": float(auc),
-        "pr_auc_average_precision": float(average_precision_score(y_true, y_score)),
+        "average_precision_ap": float(average_precision_score(y_true, y_score)),
         "brier_score": float(brier_score_loss(y_true, y_score)),
         "log_loss": float(log_loss(y_true, y_score)),
         "gini": gini_from_auc(auc),

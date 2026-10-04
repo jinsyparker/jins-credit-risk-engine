@@ -1,2 +1,2 @@
-roc_auc,average_precision_pr_auc,brier_score,accuracy_at_0_5,precision_at_0_5,recall_at_0_5
+roc_auc,average_precision_ap,brier_score,accuracy_at_0_5,precision_at_0_5,recall_at_0_5
 0.7093534937064998,0.3701433947621853,0.1453021063811794,0.8018879845393392,0.5435056746532156,0.04813849590469099

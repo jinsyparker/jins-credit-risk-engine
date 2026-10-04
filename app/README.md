@@ -14,7 +14,7 @@ python3 -m streamlit run app/streamlit_app.py
 ## Dashboard Sections
 
 - **Portfolio Overview:** portfolio-level exposure, PD, LGD, and baseline Expected Loss metrics.
-- **PD Validation:** model comparison, embedded underwriting signal ablation, calibration, PD decile separation, and out-of-time validation.
+- **PD Validation:** model comparison, embedded underwriting signal ablation, calibration, PD decile separation, and Out-of-Time validation.
 - **Expected Loss:** segment-level risk decomposition, concentration, PD x EAD drivers, LGD sensitivity, and reasonableness checks.
 - **Scenario Analysis:** deterministic PD/LGD/EAD shocks applied to baseline Expected Loss.
 

@@ -35,7 +35,7 @@ if not feature_comp.empty:
         "model_version",
         "feature_set_description",
         "roc_auc",
-        "pr_auc",
+        "average_precision_ap",
         "brier_score",
         "highest_lowest_decile_default_rate_ratio",
     ]
@@ -46,8 +46,9 @@ if not holdout_vs_oot.empty:
     st.subheader("Random Holdout vs Out-of-Time")
     st.dataframe(to_display_table(holdout_vs_oot), use_container_width=True, hide_index=True)
     st.info(
-        "The main model-risk finding is temporal calibration drift: ranking performance declines modestly, "
-        "but the newer cohort has an observed default rate above the model's average predicted PD."
+        "The main model-risk finding is temporal calibration drift. The final OOT split evaluates loans "
+        "originated on or after 2016-10-01, and the OOT cohort has an observed default rate above the "
+        "model's average predicted PD."
     )
 
 metrics = load_table("pd_validation_metrics")
