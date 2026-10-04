@@ -31,10 +31,10 @@ GitHub regular Git does not support files over 100 MB. To deploy the full datase
 
 ## Local Run
 
-Install app dependencies:
+Install dependencies:
 
 ```bash
-python3 -m pip install -r app/requirements_streamlit.txt
+python3 -m pip install -r requirements.txt
 ```
 
 Run the dashboard:

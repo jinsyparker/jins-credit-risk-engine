@@ -1,0 +1,6 @@
+model_feature_set,roc_auc,pr_auc,brier_score,interpretation
+Platform-informed logistic regression,0.7093534937064998,0.3701433947621853,0.1453021063811794,Strongest platform-informed baseline specification
+Borrower-only logistic regression,0.6746827958987611,0.3387860488686786,0.1494976894865871,Measures borrower signal without embedded lender grades/pricing
+L2 logistic regression,0.7093209464721839,0.3701489321990256,0.145306874229601,Retains performance with regularization and interpretability
+Gradient boosting,0.7068386369416114,0.369963816775698,0.1456309032428393,No material nonlinear improvement
+Random forest,0.7050177239220434,0.3675604149055869,0.1462691691937999,No material improvement over logistic alternatives
